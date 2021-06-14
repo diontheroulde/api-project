@@ -1,10 +1,9 @@
-/* Hex
-364652 -charcoal
-071108-Dark Jungle Green
-BFB1C1-Black Shadows
-B5BEC6-Silver Sand 
-C7DBE6-Beau Blue 
-DBD1C4- Bone
-141310-Smoky Black  */
 
 
+body {
+    background-image: url(photo.jpg);
+}
+
+h1 , h2 {
+    color : F9F4F4
+}
