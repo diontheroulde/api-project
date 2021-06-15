@@ -2,13 +2,52 @@
 
 body {
     background-image: url(photo.jpg);
+    background-color: FDFDFD ;
+    background-blend-mode: darken;
+    background-size: cover;
 }
 
-h1 , h2 {
-    color : F9F4F4
+h1 {
+    color : 091626;
+    font-family : 'Orbitron', sans-serif;
+    text-shadow : 1px 1px 7px white;
+    text-align: center;
 }
+
+h2 {
+    color : 091626;
+    font-family : 'Orbitron', sans-serif;
+    text-shadow : 1px 1px 7px white;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 50;
+    padding: 10px;
+
+}
+
+#savedImage-list {
+    position: absolute;
+    top: 50;
+    right: 50;
+    padding-top: 10px;
+    list-style: none;
+}
+
+#image-list {
+    /* position: absolute; */
+    top: 50;
+    left: 25;
+    padding-top: 10px;
+    list-style: none;
+}
+
 
 button {
     position: absolute;
 
+}
+
+#search-form {
+    text-align: center;
 }

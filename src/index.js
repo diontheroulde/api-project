@@ -18,44 +18,41 @@ fetch(`https://images-api.nasa.gov/search?q=${searchInput}&media_type=image`)
         res.collection.items.slice(0,10).forEach(item => {
           if(item.links === undefined) {return}
             item.links.slice(0,10).forEach(link => {
-                const imageList = document.createElement('li')
+                const spaceListItem = document.createElement('li')
                 const spaceImage = document.createElement('img')
                 spaceImage.src = link.href
                 spaceImage.height = 100
                 const likeBtn = document.createElement("button")
-                likeBtn.innerHTML = "*"
-                imageList.append(likeBtn)
+                likeBtn.innerHTML = "♥"
+                spaceListItem.append(likeBtn)
+                spaceListItem.append(spaceImage)
+                imageUl.append(spaceListItem)
                 likeBtn.addEventListener("click", (event) => {
                     event.preventDefault()
-                    document.querySelector("li").innerHTML = ''
-                    document.querySelector("button").remove()
-                    
                     const likedImageUl = document.querySelector("#savedImage-list")
-                    const likedImageList = document.createElement("li")
+                    const likeImageListItem = document.createElement("li")
                     const dislikeBtn = document.createElement('button')
                     dislikeBtn.innerHTML = "X"
-                    const saveLikedImage = document.querySelector("img")
-                    saveLikedImage.src = spaceImage.src
-                    likedImageList.insertAdjacentElement("beforeend", saveLikedImage)
-                    likedImageList.insertAdjacentElement("beforeend", dislikeBtn)
-                    likedImageUl.insertAdjacentElement("beforeend", likedImageList)
-                })
+                    dislikeBtn.addEventListener("click", (event) => {
+                        event.preventDefault()
+                        likeImageListItem.remove()
+                    })
+                    
+                    const saveLikedImage = document.createElement("img")
+                    saveLikedImage.src = link.href
+                    saveLikedImage.height = 100
+                    console.log(saveLikedImage)
+                    likeImageListItem.insertAdjacentElement("beforeend", saveLikedImage)
+                    likeImageListItem.insertAdjacentElement("beforeend", dislikeBtn)
+                    likedImageUl.insertAdjacentElement("beforeend", likeImageListItem)
+                 })
                
-            imageList.append(spaceImage)
-            imageUl.append(imageList)
+            
             })
         })
         
     })
  })
-
-        
-
-
-
-    
-
-
     
 
 })
