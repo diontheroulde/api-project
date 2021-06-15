@@ -7,3 +7,8 @@ body {
 h1 , h2 {
     color : F9F4F4
 }
+
+button {
+    position: absolute;
+
+}
