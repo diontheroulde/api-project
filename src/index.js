@@ -14,6 +14,7 @@ submitBtn.addEventListener("submit", (event) => {
 fetch(`https://images-api.nasa.gov/search?q=${searchInput}&media_type=image`)
     .then(res => res.json())
     .then(res => {
+        imageUl.innerHTML = ""
         res.collection.items.slice(0,10).forEach(item => {
           if(item.links === undefined) {return}
             item.links.slice(0,10).forEach(link => {
@@ -22,11 +23,13 @@ fetch(`https://images-api.nasa.gov/search?q=${searchInput}&media_type=image`)
                 spaceImage.src = link.href
                 spaceImage.height = 100
                 const likeBtn = document.createElement("button")
-                likeBtn.innerHTML = "$"
+                likeBtn.innerHTML = "*"
                 imageList.append(likeBtn)
                 likeBtn.addEventListener("click", (event) => {
                     event.preventDefault()
-                    document.querySelector("button").remove()
+                    buttonClick = event.target
+                   // document.querySelector("button").remove()
+                    
                     const likedImageUl = document.querySelector("#savedImage-list")
                     const likedImageList = document.createElement("li")
                     const dislikeBtn = document.createElement('button')
