@@ -27,10 +27,13 @@ fetch(`https://images-api.nasa.gov/search?q=${searchInput}&media_type=image`)
                     event.preventDefault()
                     const likedImageUl = document.querySelector("#savedImage-list")
                     const likedImageList = document.createElement("li")
+                    const dislikeBtn = document.createElement('button')
+                    dislikeBtn.innerHTML = "X"
                     const saveLikedImage = document.querySelector("img")
                     saveLikedImage.src = spaceImage.src
-                    likedImageList.append(saveLikedImage)
-                    likedImageUl.append(likedImageList)
+                    likedImageList.insertAdjacentElement("beforeend", saveLikedImage)
+                    likedImageList.insertAdjacentElement("beforeend", dislikeBtn)
+                    likedImageUl.insertAdjacentElement("beforeend", likedImageList)
                 })
                
             imageList.append(spaceImage, likeBtn)
