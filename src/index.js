@@ -27,8 +27,8 @@ fetch(`https://images-api.nasa.gov/search?q=${searchInput}&media_type=image`)
                 imageList.append(likeBtn)
                 likeBtn.addEventListener("click", (event) => {
                     event.preventDefault()
-                    buttonClick = event.target
-                   // document.querySelector("button").remove()
+                    document.querySelector("li").innerHTML = ''
+                    document.querySelector("button").remove()
                     
                     const likedImageUl = document.querySelector("#savedImage-list")
                     const likedImageList = document.createElement("li")
