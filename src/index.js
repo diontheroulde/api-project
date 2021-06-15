@@ -23,8 +23,10 @@ fetch(`https://images-api.nasa.gov/search?q=${searchInput}&media_type=image`)
                 spaceImage.height = 100
                 const likeBtn = document.createElement("button")
                 likeBtn.innerHTML = "$"
+                imageList.append(likeBtn)
                 likeBtn.addEventListener("click", (event) => {
                     event.preventDefault()
+                    document.querySelector("button").remove()
                     const likedImageUl = document.querySelector("#savedImage-list")
                     const likedImageList = document.createElement("li")
                     const dislikeBtn = document.createElement('button')
@@ -36,7 +38,7 @@ fetch(`https://images-api.nasa.gov/search?q=${searchInput}&media_type=image`)
                     likedImageUl.insertAdjacentElement("beforeend", likedImageList)
                 })
                
-            imageList.append(spaceImage, likeBtn)
+            imageList.append(spaceImage)
             imageUl.append(imageList)
             })
         })
