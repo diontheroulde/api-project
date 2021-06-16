@@ -34,6 +34,11 @@ h2 {
     list-style: none;
 }
 
+img {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
 #image-list {
     /* position: absolute; */
     top: 50;
@@ -41,7 +46,7 @@ h2 {
     padding-top: 10px;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 2fr);
     gap: 10px;
 }
 
