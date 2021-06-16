@@ -15,9 +15,9 @@ fetch(`https://images-api.nasa.gov/search?q=${searchInput}&media_type=image`)
     .then(res => res.json())
     .then(res => {
         imageUl.innerHTML = ""
-        res.collection.items.slice(0,10).forEach(item => {
+        res.collection.items.slice(0,20).forEach(item => {
           if(item.links === undefined) {return}
-            item.links.slice(0,10).forEach(link => {
+            item.links.slice(0,20).forEach(link => {
                 const spaceListItem = document.createElement('li')
                 const spaceImage = document.createElement('img')
                 spaceImage.src = link.href
@@ -37,7 +37,6 @@ fetch(`https://images-api.nasa.gov/search?q=${searchInput}&media_type=image`)
                         event.preventDefault()
                         likeImageListItem.remove()
                     })
-                    
                     const saveLikedImage = document.createElement("img")
                     saveLikedImage.src = link.href
                     saveLikedImage.height = 100
