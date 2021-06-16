@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
               console.log(commentList)
             })
             spaceImage.src = link.href
-            spaceImage.height = 125
+            spaceImage.height = 150
             const likeBtn = document.createElement("button")
             likeBtn.innerHTML = "♥"
             textareaDiv.append(spaceTextArea)

@@ -63,6 +63,12 @@ button {
     text-align: center;
 }
 
-textarea{
-margin: 0px; height: 76px; width: 158px;"></textarea>
+textarea {
+    margin: 0px 0px 10px; 
+    width: 146px; 
+    height: 67px;
+    border: 1px solid gray;
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
