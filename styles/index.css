@@ -29,7 +29,7 @@ h2 {
 #savedImage-list {
     position: absolute;
     top: 50;
-    right: 50;
+    right: 25;
     padding-top: 10px;
     list-style: none;
 }
@@ -42,12 +42,15 @@ img {
 #image-list {
     /* position: absolute; */
     top: 50;
-    left: 25;
     padding-top: 10px;
+    padding-right: 25px;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(3, 2fr);
-    gap: 10px;
+    text-align: left;
+    float: center;
+    justify-self: stretch;
+    margin: 20px;
 }
 
 
@@ -58,4 +61,8 @@ button {
 
 #search-form {
     text-align: center;
+}
+
+textarea{
+margin: 0px; height: 76px; width: 158px;"></textarea>
 }
