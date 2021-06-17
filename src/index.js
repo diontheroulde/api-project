@@ -17,26 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
           item.links.slice(0, 20).forEach(link => {
             const spaceListItem = document.createElement("li")
             const spaceImage = document.createElement("img")
-            const textareaDiv = document.createElement("div")
-            const spaceTextArea = document.createElement("textarea")
-            const commentButton = document.createElement("button")
-            commentButton.innerHTML = "Comment"
-            commentButton.addEventListener("click", () => {
-              const commentList = document.createElement("ul")
-              const commentListItem = document.createElement("li")
-              commentListItem.innerText = spaceTextArea.value
-              commentList.append(commentListItem)
-              console.log(commentList)
-            })
+            const likeBtn = document.createElement("button")
             spaceImage.src = link.href
             spaceImage.height = 150
-            const likeBtn = document.createElement("button")
             likeBtn.innerHTML = "♥"
-            textareaDiv.append(spaceTextArea)
-            textareaDiv.append(commentButton)
             spaceListItem.append(likeBtn)
             spaceListItem.append(spaceImage)
-            spaceListItem.append(textareaDiv)
             imageUl.append(spaceListItem)
             likeBtn.addEventListener("click", (event) => {
               event.preventDefault()
@@ -60,6 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
         })
       })
   })
+  const updateCommentButton = document.querySelector("#comment-section button")
+  updateCommentButton.addEventListener("click", (event) => {
+    event.preventDefault()
+    
+  })
 })
 
-// ♥
+

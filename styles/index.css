@@ -65,10 +65,24 @@ button {
 
 textarea {
     margin: 0px 0px 10px; 
-    width: 146px; 
-    height: 67px;
+    /* width: 1035px;  */
+    height: 122px;  
     border: 1px solid gray;
     padding: 5px;
+    padding-bottom: 10px;
     font-size: 14px;
     margin-bottom: 10px;
+    background-color: black;
+    color : white;
+    font-family : 'Orbitron', sans-serif;
+    position: fixed;
+    bottom: 25px;
+    width: 50%;
+
+}
+
+#comment-section button {
+    position: fixed;
+    bottom: 10px;
+    margin-top: 10px;
 }
