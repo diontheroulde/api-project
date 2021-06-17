@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     newComment.innerHTML = commentTextArea.value
     document.querySelector('.comments').append(newComment)
+    commentTextArea.value = ""
     window.scrollTo(0,document.body.scrollHeight);
     
     
