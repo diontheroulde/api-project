@@ -1,13 +1,16 @@
-# api-project
+# Trek Star 
+ Trek Star is a webpage where you can search and like pictures of space.
 
-Core Deliverable
+# Installation
+Fork and clone this repository
+Open the index.html file on your browser
 
--When a user searches for images of specific content, the page renders those images
--The page loads first 10 results
+# Core Deliverables
+
+-As a user I can see the space image from the server
+-Click on the heart icon to save the photos I like to the saved image list
+-Click on the "X" icon to remove images from the saved images list
+-Add and update comments in the comment section after clicking "Update Comments" button
 
 
-Other Deliverables
--Client can click save button and save the pictures
--Saved pictures will render on a separate list
--Client will be able to add comments to pictures that render
--Add alert "Asteroid Incoming!" (after a certain amount of clicks)
+
