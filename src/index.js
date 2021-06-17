@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const submitBox = document.querySelector("input#search")
   const imageUl = document.querySelector("ul#image-list")
 
+  
+
   submitBtn.addEventListener("submit", (event) => {
     event.preventDefault()
     const searchInput = submitBox.value
@@ -49,7 +51,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const updateCommentButton = document.querySelector("#comment-section button")
   updateCommentButton.addEventListener("click", (event) => {
     event.preventDefault()
+    const commentTextArea = document.querySelector('textarea')
+    const newComment = document.createElement("li")
+    newComment.innerHTML = commentTextArea.value
+    document.querySelector('.comments').append(newComment)
     
+    
+    
+    
+
   })
 })
 
