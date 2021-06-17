@@ -50,11 +50,24 @@ img {
     text-align: left;
     float: center;
     justify-self: stretch;
-    margin: 60px;
+    margin: 60px 200px 20px 60px;
     top: 0;
     left: 0;
     
 }
+
+
+#image-list li {
+    text-align: center;
+    margin: 0 20px 20px 0;
+    padding: 5px 5px 0 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+
+}
+
+
+
 
 
 button {
@@ -84,7 +97,7 @@ textarea {
     
     text-align: center;
     padding-top: 100px;
-    
+    bottom: 0px;
 }
 
 
@@ -92,5 +105,10 @@ textarea {
 
 .comments li {
     list-style: none;
-    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 1em ;
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 1em;
 }
